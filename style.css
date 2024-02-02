@@ -1,91 +1,98 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
+}
 
 
-  body{
-    background:linear-gradient(hotpink,rgb(152, 47, 100));
+body {
+    background: linear-gradient(hotpink, rgb(152, 47, 100));
     display: flex;
     align-items: top;
     justify-content: center;
-    height: 750px;
+}
 
-  }
-  .container{
+.container {
     display: grid;
-   grid-template-columns: 10% 40% 40%;
-   justify-self:space-between;
-    border-style:ridge;                         
+    grid-template-columns: 1fr 1fr;
+    justify-self: space-between;
+    border-style: ridge;
     max-width: 700px;
-    height: 600px;
-    color:whitesmoke;
-    
-  }
-  .header{
-    grid-column: span 4;
+    color: whitesmoke;
+}
+
+.header {
+    grid-column-start: 1;
+    grid-column-end: 5;
     text-align: center;
     border-bottom: ridge;
-    height: 50px;
-  }
-  .content{
+}
+
+.content {
     text-align: center;
     justify-self: center;
-   
-  }
-  .content img{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin: 11px;
+}
+
+.content img {
     width: 59%;
-  
-   
     justify-self: center;
-    grid-column: span 2;
-    height: 230px;
+    grid-column-start: 2;
+    grid-column-end: 3;
     border-radius: 30px;
-  }
-  ul{
+}
+
+ul {
     list-style: none;
-  }
-  #contact{
-    grid-column: span 2;
+}
+
+#contact {
+    grid-column-start: 2;
+    grid-column-end: 3;
     width: 100%;
     justify-self: center;
-  }
-  #experience{
-    grid-column: span 2;
+}
+
+#experience {
+    grid-column-start: 1;
+    grid-column-end: 3;
     width: 100%;
-    
-  }
-  #bio{
-    grid-column: span 2;
+}
+
+#bio {
+    grid-column-start: 3;
+    grid-column-end: 4;
     width: 100%;
-  }
-  #education{
-    grid-column: span 2;
+}
+
+#education {
+    grid-column-start: 3;
+    grid-column-end: 5;
     width: 100%;
-    
-  }
-  p {
-    
+}
+
+p {
+
     display: flex;
     flex-direction: column;
     justify-self: center;
     grid-column: span 2;
 }
-@media(max-width: 550px){
-    .container{
+
+@media(max-width: 550px) {
+    .container {
         grid-template-columns: 1fr;
-        height: auto;
     }
+
     .header,
     #contact,
     #experience,
     #bio,
     #education,
-    p{
+    p {
         grid-column: span 1;
         width: 100%;
     }
-
-
 }
